@@ -7,7 +7,7 @@
 
 #include <bme680_reg.h>
 
-#define BME680_ADDR     0x00
+#define BME680_ADDR     0x77
 
 #define I2C_LABEL       i2c0
 
@@ -34,5 +34,4 @@ int main(void)
         return -1;
     }
 
-    // your code
 }
