@@ -52,7 +52,7 @@ From the sensor's datasheet you can find how to configure the sensor for the des
 Hints:
 
 - In the template, there is header file called `bme680_reg.h`, which already holds the register addresses of the most important registers in the sensor
-- The template includes code that initializes the I2C device and reads the Chip ID register
+- The template includes code that initializes a device pointer to the I2C0 peripheral and reads the Chip ID register
 - You only need to read the temperature, not any other value from the sensor (you can of course experiment with the other sensing channels if you have the time)
 - The data you get from the sensor is more or less the raw reading from the sensor's internal ADC, so you will have to convert that into a temperature value. The formula for doing that is in the datasheet
 
