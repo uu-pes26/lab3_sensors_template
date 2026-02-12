@@ -31,11 +31,11 @@ A link to its documentation is given in the section above.
 In general, to build an application you have to navigate to the folder that holds the application's **CMakeLists.txt** file and issue 
 
 ```bash 
-west build -b rpi_pico
+west build -b rpi_pico2/rp2350a/m33
 ``` 
 
 This will automatically create a `/build` folder in the current directory and start compiling your application.
-West has many optional flags (such as the `-b rpi_pico`) so it is worth looking into the documentation which ones might be interesting for you!
+West has many optional flags (as exemplified with `-b rpi_pico2/rp2350a/m33`) so it is worth looking into the documentation which ones might be interesting for you!
 
 If west fails to build your project with an error about a missing "build" command you probably have not set all required environment variables.
 This can usually be solved by sourcing the *zephyr-env.sh* (Linux, macOS) or *zephyr-env.cmd* (Windows) file in the `/zephyrproject/zephyr/` folder. 
@@ -63,4 +63,4 @@ The choice is yours whether to use the Fetch and Get API or the more recent Read
 
 Hints: 
 
-- You will want to update the device tree overlay `rpi_pico.overlay` to include the BME680 sensor. You can look at the Zephyr examples to see how it is done for other boards
+- You will want to update the device tree overlay `rpi_pico2_rp2350_m33.overlay` to include the BME680 sensor. You can look at the Zephyr examples to see how it is done for other boards.
