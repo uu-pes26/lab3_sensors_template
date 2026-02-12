@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 # Select our board 
-set(BOARD rpi_pico)
+set(BOARD rpi_pico2/rp2350a/m33)
+
 
 # Find/Select cmake package 'Zephyr' 
 find_package(Zephyr)

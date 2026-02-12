@@ -18,6 +18,7 @@ int main(void)
     if (i2c_bus == NULL)
     {
         printf("No device found; did initialization fail?\n");
+        fflush(stdout);
         return -1;
     } 
     
@@ -25,13 +26,18 @@ int main(void)
     uint8_t id;
     if (i2c_reg_read_byte(i2c_bus, BME680_ADDR, BME680_ID, &id) < 0){
         printf("Could not communicate with sensor.\n"); 
+        fflush(stdout);
         return -1; 
     }
     
     if (id != 0x61)
     {
         printf("Sensor ID could not be read from I2C device.\n");
+        fflush(stdout);
         return -1;
     }
+
+    printf("Everything is working.\n");
+    fflush(stdout);
 
 }
